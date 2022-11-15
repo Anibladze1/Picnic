@@ -44,6 +44,7 @@ def make_graphs(segment_chosen):
     fig_pie2 = px.pie(data_frame=df_hist, names="Description Type", values="Count",
                       title=f"Share of {segment_chosen} Segment Participants ",)
                       #width=900, height=800)
+    fig_pie2.update_traces(textposition='inside', textinfo='percent+label')
 
     # # All Answers
     df_fig_all = df.dropna(subset=["Count"])
